@@ -1,0 +1,282 @@
+@import "../../../common/variable";
+
+
+page {
+  height: 100%;
+}
+
+.tab-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 7%;
+  .t-t-item {
+    position: relative;
+    &:after {
+      content: '>';
+      color: #9a9a9a;
+      font-size: 40rpx;
+      position: absolute;
+      top: 50%;
+      right: -60rpx;
+      transform: translate(0, -50%);
+    }
+    &:nth-last-child(1) {
+      &:after {
+        content: '';
+      }
+    }
+  }
+}
+
+swiper {
+  height: 93%;
+}
+
+.goods {
+  height: 100%;
+}
+
+.address {
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 20rpx;
+  image {
+    width: 100%;
+  }
+  .address-s {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 0 20rpx;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 120rpx;
+    .a-s-t {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .open-setting {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    transform: translate(0, 0);
+    button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80% !important;
+    }
+  }
+}
+
+.goods-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.choose-gender {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  image {
+    width: 124rpx;
+    height: 124rpx;
+  }
+
+  .gender-circle {
+    width: 22rpx;
+    height: 22rpx;
+    border: 4rpx solid #979797;
+  }
+  .gender-active {
+    border-color: #FF3656;
+  }
+  .c-g-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 160rpx;
+  }
+}
+
+
+.user-input {
+  display: flex;
+  border: 2rpx solid #666;
+  border-radius: 50rpx;
+  align-items: center;
+  padding: 0 30rpx;
+  line-height: 88rpx;
+  height: 88rpx;
+  margin: 0 30rpx;
+  margin-top: 30rpx;
+  input {
+    flex: 1;
+    line-height: inherit;
+    padding-left: 20rpx;
+  }
+}
+
+.user-time {
+  margin: 0 !important;
+  position: fixed;
+  bottom: 256rpx;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  padding: 0 50rpx;
+}
+
+.user-step {
+  border-color: #fff !important;
+  .flex1 {
+    border: 2rpx solid #ff3757 !important;
+    border-radius: 60rpx;
+  }
+}
+.need-letter {
+  letter-spacing: 10rpx;
+}
+
+.mr60 {
+  margin-right: 60rpx;
+}
+
+.back-step {
+  bottom: 150rpx;
+  border-color: #fff !important;
+  color: #999;
+  .flex1 {
+    border: 2rpx solid #fff !important;
+    border-radius: 60rpx;
+  }
+}
+
+.pay-success-btn {
+  bottom: 256rpx !important;
+}
+
+.icon-daosanjiao {
+  position: relative;
+  &:before{
+    position: absolute;
+    top: 50%;
+    right: 30rpx;
+    transform: translate(0, -50%);
+    font-size: 24rpx;
+    color: #d8d8d8;
+  }
+}
+
+.finish-img {
+  image {
+    width: 200rpx;
+    height: 200rpx;
+  }
+}
+
+.cff3a5a {
+  border-color: #ff3a5a;
+}
+
+.mt60 {
+  margin-top: 60rpx;
+}
+
+.mt120 {
+  margin-top: 120rpx;
+}
+
+.circle {
+  position: fixed;
+  bottom: 20rpx;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  view {
+    font-size: 170rpx;
+  }
+}
+
+picker {
+  margin-left: 30rpx;
+}
+
+.learn-time {
+  padding: 60rpx;
+  padding-bottom: 0;
+}
+
+.s-i-5 {
+  height: 100%;
+  .bgfff {
+    height: 100%;
+  }
+  .user-time {
+    width: 80%;
+  }
+}
+
+.success {
+  font-size: 48rpx;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 70rpx;
+}
+
+.goods-btn {
+  position: fixed;
+  width: 90%;
+  bottom: 50rpx;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #ff3b5b;
+  margin: 0 !important;
+  box-shadow: 0rpx 4rpx 10rpx 0rpx rgba(255, 228, 232, 0.7) !important;
+} 
+
+.pay-img{
+  margin-top: 160rpx;
+  image{
+    width: 446rpx;
+  }
+}
+
+.apply-finish {
+  padding-top: 160rpx;
+  image {
+    width: 446rpx;
+  }
+}
+
+.apply-last-img {
+  width: 384rpx !important;
+  height: 268rpx !important;
+  margin-top: 86rpx !important;
+}
+
+.user-all-finish {
+  padding: 0 !important;
+  width: 90% !important;
+  //padding: 0 30rpx !important;
+}
+
+.order-info {
+  background-color: #f8f8f8;
+}

@@ -1,0 +1,230 @@
+@import "../../../common/variable";
+
+.tab-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .t-t-item {
+    padding-bottom: 4rpx;
+    transition: all .5s;
+    //flex: 1;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 14rpx;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      background-color: #fff;
+      transition: all .5s;
+    }
+  }
+  .cff3b5b {
+    &:after {
+      height: 4rpx;
+      width: 100%;
+      //background-color: #FF3B5B;
+      background-color: #fff;
+    }
+  }
+}
+
+.hot-wrap {
+  display: flex;
+  align-items: center;
+  //margin-bottom: 20rpx;
+  min-height: 202rpx;
+  //border: 2rpx solid #2c332d;
+  .h-w-left {
+    //flex: 0 0 30%;
+    height: 202rpx;
+    width: 260rpx;
+    margin-right: 30rpx;
+    &:before {
+      content: attr(data-content);
+      position: absolute;
+      top: 20rpx;
+      left: 0;
+      color: #fff;
+      font-size: 20rpx;
+      font-weight: 700;
+      background: #FF3B5B;
+      opacity: 0.9;
+      border-top-right-radius: 50rpx;
+      border-bottom-right-radius: 50rpx;
+      padding: 6rpx 20rpx;
+    }
+  }
+  .h-w-right {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: inherit;
+    min-height: 150rpx;
+    //padding: 0 10rpx;
+    .tag {
+      display: inline-block;
+      border: 2rpx solid #D3ABF7;
+      padding: 2rpx 10rpx;
+      margin-right: 14rpx;
+      margin-top: 10rpx;
+      color: #D3ABF7;
+    }
+  }
+  .h-w-r-bottom {
+    display: flex;
+    align-items: center;
+  }
+
+  .shop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    image {
+      width: 30rpx;
+      height: 30rpx;
+    }
+    .shop-info {
+      display: flex;
+      align-items: center;
+      .shop-name {
+        display: flex;
+        text {
+          margin-right: 20rpx;
+        }
+        navigator {
+          margin-top: 10rpx;
+        }
+      }
+      image {
+        width: 50rpx;
+        height: 50rpx;
+        margin-right: 10rpx;
+      }
+    }
+  }
+}
+
+.other {
+  padding-right: 30rpx;
+}
+
+.go-shop {
+  padding: 14rpx 30rpx;
+  background-color: #ff3b5b;
+  border-radius: 50rpx;
+  display: inline-block;
+}
+
+.video {
+  .hot-wrap {
+    min-height: 142rpx;
+  }
+  .h-w-left {
+    height: 142rpx !important;
+  }
+}
+
+.room-wrap {
+  .room {
+    display: flex;
+    .room-left {
+      display: flex;
+      flex-direction: column;
+      margin-right: 20rpx;
+      image {
+        width: 100rpx;
+        height: 100rpx;
+      }
+    }
+    .room-right {
+      flex: 1;
+      .room-people {
+        display: flex;
+        justify-content: space-between;
+      }
+      .room-img {
+        image {
+          transition: all 0.5s;
+          width: 170rpx;
+          padding: 0;
+          height: 170rpx;
+          margin: 5rpx 5rpx 0 0;
+        }
+        .hideHeight {
+          height: 0;
+          margin: 0;
+          width: 0;
+        }
+      }
+    }
+    .nav {
+      margin-top: 20rpx;
+      padding: 6rpx 24rpx;
+      border: 2rpx solid #ff3a5a;
+      border-radius: 50rpx;
+      display: inline-block;
+      font-size: 28rpx;
+    }
+    .room-tag {
+      color: #444;
+      border-color: #444;
+      margin-right: 20rpx;
+      padding: 6rpx 18rpx;
+    }
+  }
+}
+
+.answer {
+  .answer-img {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    image {
+      width: 120rpx;
+      height: 120rpx;
+      margin: 10rpx;
+      margin-left: 0;
+      margin-right: 20rpx;
+      border-radius: 18rpx;
+    }
+  }
+
+  .h-i-user {
+    display: flex;
+    align-items: center;
+    .user-img {
+      width: 40rpx;
+      height: 40rpx;
+      margin-right: 10rpx;
+    }
+    .user-operation {
+      flex: 1;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .iconfont {
+        //margin-right: 20rpx;
+        font-size: 20rpx;
+        display: flex;
+        align-items: center;
+        &:before {
+          font-size: 26rpx;
+          margin-right: 10rpx;
+        }
+      }
+    }
+  }
+}
+
+.check8 {
+  //todo  字数检查
+}

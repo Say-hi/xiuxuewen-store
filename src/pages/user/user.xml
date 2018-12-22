@@ -1,0 +1,18 @@
+
+  <!--顶部信息-->
+<view class="top-info bgfff bb">
+  <image class="br" src="{{ testImg }}"></image>
+  <view class="c444 fw7 f28">微信昵称</view>
+</view>
+
+<view class="p20 room-info">
+  <!--教室信息-->
+  <view class="br18  p30 pr">
+    <image class="br18 r-i-bg pa" src="{{ testImg }}"></image>
+    sdfasdf
+  </view>
+
+</view>
+<!--错误弹窗-->
+<import src="../template/template"></import>
+<template wx:if="{{ toast.show }}" is="showToast" data="{{ ...toast }}"></template>
