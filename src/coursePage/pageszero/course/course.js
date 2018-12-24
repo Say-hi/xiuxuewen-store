@@ -7,11 +7,20 @@ Page({
    * 页面的初始数据
    */
   data: {
+    top_bg_1: 'https://teach-1258261086.cos.ap-guangzhou.myqcloud.com/image/admin/storeSide/shop_bg_1.png',
+    top_bg_2: 'https://teach-1258261086.cos.ap-guangzhou.myqcloud.com/image/admin/storeSide/shop_bg_2.png',
+    tabArr: ['视频课程', '线下课程'],
+    tabIndex: 0,
     tabNav: app.data.label,
+    testImg: app.data.testImg,
     lists: [],
     currentIndex: 0
   },
-
+  chooseTab (e) {
+    this.setData({
+      tabIndex: e.currentTarget.dataset.index
+    })
+  },
   chooseIndex (e) {
     app.setBar(e.currentTarget.dataset.text)
     this.data.lists = []

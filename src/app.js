@@ -78,6 +78,13 @@ App({
     reservation_bg: 'https://c.jiangwenqiang.com/workProject/payKnowledge/reservation_bg.png',
     imgDomain: 'https://rtx.24sky.cn'
   },
+  momentAdd (number, type, time) {
+    if (time) {
+      return Moment(time).add(number, type)
+    } else {
+      return  Moment().add(number, type)
+    }
+  },
   moment (time) {
     return Moment(time, 'YYYYMMDD HH:mm:ss').fromNow()
   },
@@ -754,7 +761,7 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch () {
-    this.getNavTab({})
+    // this.getNavTab({})
     // this.getFont()
   },
   /**

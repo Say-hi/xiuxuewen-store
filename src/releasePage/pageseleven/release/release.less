@@ -1,89 +1,41 @@
-@import "../../../common/variable";
-page {
-  background-color: #fff;
-}
-
-textarea {
-  width: 100%;
-}
-
-.up-img {
-  @width: 210rpx;
-  display: flex;
-  flex-wrap: wrap;
-  image {
-    width: @width;
-    height: @width;
-    margin: 10rpx;
+.courseType {
+  padding: 15rpx 30rpx;
+  border: 2rpx solid #979797;
+  border-radius: 40rpx;
+  display: inline-block;
+  transition: all .5s;
+  &:nth-last-child(1) {
+    margin-right: 0;
   }
-  .up-btn {
-    display: inline-block;
-    margin: 10rpx;
-    width: @width;
-    height: @width;
-    border: 2rpx dashed #bbb;
-    position: relative;
-    &:before {
-      font-size: 100rpx;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: #bbb;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  .up-progress {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: @width;
-    height: @width;
-    .tac {
-      padding: 2rpx 6rpx;
-      border-radius: 20rpx;
-      background-color: #eee;
-    }
-  }
-}
-
-.bottom-wrap {
-  display: flex;
-  align-items: center;
-  .count {
-    flex: 1;
-    word-break: keep-all;
-  }
-}
-
-.tips {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  .tips-item {
-    margin: 10rpx;
-    margin-left: 0;
-    border: 2rpx solid #999;
-    padding: 4rpx 10rpx;
-    transition: all .5s;
-  }
-  .active {
-    background-color: @mainColor;
+  &.active {
+    font-weight: 700;
+    border-color: #ff3b5b;
+    background: rgba(255, 59, 91, 0.9);
     color: #fff;
-    border-color: @mainColor;
   }
 }
 
-.release-btn {
-  position: fixed;
-  bottom: 30rpx;
-  left: 50%;
-  width: 80%;
+.courseInput {
+  width: 176rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
   text-align: center;
+}
+
+.border-out {
+  border: 2rpx solid #979797;
+}
+
+.i-title {
+  padding: 0rpx 30rpx;
   height: 88rpx;
   line-height: 88rpx;
-  background-color: #ff3b5b;
-  transform: translateX(-50%);
-  border-radius: 80rpx;
-  box-shadow: 0rpx 6rpx 10rpx 4rpx rgba(238, 200, 211, 0.7);
+}
+
+.show-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

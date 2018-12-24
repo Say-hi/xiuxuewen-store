@@ -6,6 +6,23 @@ Page({
    * 页面的初始数据
    */
   data: {
+    tabNav: [
+      {
+        t: '发布课程',
+        url: '/releasePage/pageseleven/releaseCourse/releaseCourse',
+        img: app.data.testImg
+      },
+      {
+        t: '我的课程',
+        url: '/coursePage/pageszero/course/course',
+        img: app.data.testImg
+      },
+      {
+        t: '分享有奖',
+        url: '/releasePage/pageseleven/releaseCourse/releaseCourse',
+        img: app.data.testImg
+      }
+    ],
     testImg: app.data.testImg
   },
 

@@ -1,10 +1,14 @@
 <view class="p20">
   <!--顶部导航-->
   <view class="bgfff br18 top-wrap">
-    <view wx:for="123" wx:key="*1" class="t-w-item tac">
-      <image class="br" src="{{ testImg }}"></image>
-      <view class="c444 f28 mt20">发布课程</view>
-    </view>
+    <navigator  hover-class="none"
+                url="{{ item.url }}"
+                wx:for="{{ tabNav }}"
+                wx:key="*1"
+                class="t-w-item tac">
+      <image class="br" src="{{ item.img }}"></image>
+      <view class="c444 f28 mt20">{{ item.t }}</view>
+    </navigator>
   </view>
   <!--消息通知-->
   <view class="p30 br18 bgfff message c444 mt20">
@@ -13,12 +17,12 @@
     <text class="f22 c666">30分钟前</text>
   </view>
 
-  <view class="p30 br18 bgfff message c444 f28 mt20">
-    <view>教室信息设置</view>
-  </view>
-  <view class="p30 br18 bgfff message c444 f28 mt1">
-    <view>联系客服</view>
-  </view>
+  <navigator url="/releasePage/pageseleven/release/release" class="p30 br18 bgfff message c444 f28 mt20">
+    <view class="jwqfont jwq-shezhi">教室信息设置</view>
+  </navigator>
+  <button open-type="contact" class="p30 br18 bgfff message c444 f28 mt1">
+    <view class="jwqfont jwq-kefu">联系客服</view>
+  </button>
 </view>
 
 <import src="../template/template"></import>

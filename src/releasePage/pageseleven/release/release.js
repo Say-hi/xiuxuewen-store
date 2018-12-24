@@ -1,7 +1,7 @@
 // 获取全局应用程序实例对象
 const app = getApp()
-const COS = require('./cos-js-sdk-v5.min')
-const config = require('./config')
+const COS = require('../cos-js-sdk-v5.min')
+const config = require('../config')
 const cos = new COS({
   getAuthorization (params, callback) {
     let authorization = COS.getAuthorization({
@@ -28,6 +28,8 @@ Page({
         t: '啊撒旦看风景'
       }
     ],
+    labelIndex: -1,
+    labelArr: ['富力天域', '十年纹绣', 'ID品牌'],
     testImg: app.data.testImg,
     upImgArr: [],
     upImgArrProgress: [],
@@ -198,7 +200,7 @@ Page({
     this.setData({
       options
     })
-    app.setBar(options.type || '发布问题')
+    app.setBar(options.type || '教室信息设置')
     // TODO: onLoad
   },
 
