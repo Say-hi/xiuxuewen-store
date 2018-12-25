@@ -114,7 +114,7 @@
 
 <view class="zw mt10"></view>
 
-<view class="bottom-btn">
+<view catchtap="goRelease" class="bottom-btn">
   <view class="f34 cfff fw7 lh88 tac">发布</view>
 </view>
 <!--错误弹窗-->

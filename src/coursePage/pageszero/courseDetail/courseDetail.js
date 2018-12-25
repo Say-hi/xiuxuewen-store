@@ -10,6 +10,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    swiperIndex: 1,
+    swiperArr: [app.data.testImg, app.data.testImg],
     latitude: 23.111123,
     longitude: 113.123432,
     poster: 'https://c.jiangwenqiang.com/api/logo.jpg',
@@ -66,6 +68,11 @@ Page({
     ],
     commentArr: [],
     rIndex: -1
+  },
+  swiperChange (e) {
+    this.setData({
+      swiperIndex: e.detail.current * 1 + 1
+    })
   },
   goComment () {
     this.setData({
@@ -131,16 +138,10 @@ Page({
     console.log('视频播放结束')
   },
   chooseIndex (e) {
-    if (this.data.options && this.data.options.type * 1 === 3) {
-      this.setData({
-        currentIndex: e.currentTarget.dataset.index
-      })
-    } else {
-      this.setData({
-        currentIndex: e.currentTarget.dataset.index,
-        scrollToId: e.currentTarget.dataset.id
-      })
-    }
+    this.setData({
+      currentIndex: e.currentTarget.dataset.index,
+      scrollToId: e.currentTarget.dataset.id
+    })
   },
 
   chooseVideoPlay (e) {
@@ -372,9 +373,8 @@ Page({
         videoTab: this.data.videoTab
       })
     } else if (options.type * 1 === 3) {
-      this.data.videoTab[1].t = '免费课程'
-      this.data.videoTab[2].t = '驻店课程'
-      this.data.videoTab.push({t: '作品秀'})
+      this.data.videoTab[1].t = '老师风采'
+      this.data.videoTab[2].t = '作品秀'
       this.setData({
         videoTab: this.data.videoTab
       })
