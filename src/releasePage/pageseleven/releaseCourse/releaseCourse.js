@@ -410,6 +410,12 @@ Page({
   upno () {
     app.setToast(this, {content: '图片上传中，请稍后操作'})
   },
+  goRelease () {
+    let type = this.data.courseIndex === 0 ? 1 : this.data.courseIndex === 1 ? 2 : 4
+    wx.navigateTo({
+      url: `/coursePage/pageszero/courseDetail2/courseDetail?type=${type}`
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

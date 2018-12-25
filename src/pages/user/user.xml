@@ -1,5 +1,4 @@
-
-  <!--顶部信息-->
+<!--顶部信息-->
 <view class="top-info bgfff bb">
   <image class="br" src="{{ testImg }}"></image>
   <view class="c444 fw7 f28">微信昵称</view>
@@ -16,14 +15,20 @@
       <image class="br pa" src="{{ testImg }}"></image>
     </view>
   </view>
-
-  <view class="p30 br18 bgfff message c444 f28 mt30">
+  <!--我的收益-->
+  <navigator hover-class="none"
+             url="/incomePage/pagesone/income/income"
+             class="p30 br18 bgfff message c444 f28 mt30">
     <view class="jwqfont jwq-shouyi">我的收益</view>
-  </view>
-  <view class="p30 br18 bgfff message c444 f28 mt1">
+  </navigator>
+  <!--消息通知-->
+  <navigator hover-class="none"
+             url="/messagePage/pagestwo/message/message"
+             class="p30 br18 bgfff message c444 f28 mt1">
     <view class="jwqfont jwq-tongzhi">消息通知</view>
-  </view>
+  </navigator>
 </view>
+
 <!--错误弹窗-->
 <import src="../template/template"></import>
 <template wx:if="{{ toast.show }}" is="showToast" data="{{ ...toast }}"></template>

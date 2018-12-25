@@ -20,86 +20,87 @@
       "name": "course",
       "pages": [
         "pageszero/course/course", // 课程列表
-        "pageszero/courseDetail/courseDetail" // 课程详情
+        "pageszero/courseDetail/courseDetail", // 课程详情
+        "pageszero/courseDetail2/courseDetail" // 课程详情-用于发布预览
       ]
     },
     {
-      "root": "collagePage", // 拼团分包
-      "name": "collage",
+      "root": "incomePage", // 收益分包
+      "name": "income",
       "pages": [
-        "pagesone/collage/collage" // 拼团
+        "pagesone/income/income" // 拼团
       ]
     },
     {
-      "root": "practicePage", // 实操练习分包
-      "name": "practice",
+      "root": "messagePage", // 信息分包
+      "name": "message",
       "pages": [
-        "pagestwo/practice/practice", // 实操练习
-        "pagestwo/practiceDetail/practiceDetail" // 实操练习详情
+        "pagestwo/message/message", // 信息
+        "pagestwo/messageDetail/messageDetail" // 信息详情
       ]
     },
-    {
-      "root": "answerPage", // 问答分包
-      "name": "answer",
-      "pages": [
-        "pagesthree/answer/answer", // 问答列表
-        "pagesthree/answerDetail/answerDetail", // 问答详情
-        "pagesthree/answerDetail2/answerDetail2" // 问答详情2
-      ]
-    },
-    {
-      "root": "feedbackPage", // 反馈分包
-      "name": "feedback",
-      "pages": [
-        "pagesfour/feedback/feedback" // 反馈
-      ]
-    },
-    {
-      "root": "orderPage", // 订单分包
-      "name": "order",
-      "pages": [
-        "pagesfive/order/order" // 用户订单
-      ]
-    },
-    {
-      "root": "searchPage", // 搜索分包
-      "name": "search",
-      "pages": [
-        "pagessix/searchHistory/searchHistory"
-      ]
-    },
-    {
-      "root": "reservationPage", // 线下预约分包
-      "name": "reservation",
-      "pages": [
-        "pagesseven/reservation/reservation", // 预约列表
-        "pagesseven/myReservation/myReservation", // 我的报名
-        "pagesseven/reservationDetail/reservationDetail", // 预约详情
-        "pagesseven/teacherDetail/teacherDetail" // 教师详情
-      ]
-    },
-    {
-      "root": "teacherPage", // 教师端
-      "name": "teacher",
-      "pages": [
-        "pageseight/teacherAnswer/teacherAnswer"
-      ]
-    },
-    {
-      "root": "offlinePage", // 线下课程分包
-      "name": "offline",
-      "pages": [
-        "pagesnine/courseOffline/courseOffline", // 线下课程首页
-        "pagesnine/offlineApply/offlineApply" // 线下课程报名信息填写页面
-      ]
-    },
-    {
-      "root": "collectPage", // 收藏分包
-      "name": "collect",
-      "pages": [
-        "pagesten/collect/collect" // 我的收藏&我的预约
-      ]
-    },
+//    {
+//      "root": "answerPage", // 问答分包
+//      "name": "answer",
+//      "pages": [
+//        "pagesthree/answer/answer", // 问答列表
+//        "pagesthree/answerDetail/answerDetail", // 问答详情
+//        "pagesthree/answerDetail2/answerDetail2" // 问答详情2
+//      ]
+//    },
+//    {
+//      "root": "feedbackPage", // 反馈分包
+//      "name": "feedback",
+//      "pages": [
+//        "pagesfour/feedback/feedback" // 反馈
+//      ]
+//    },
+//    {
+//      "root": "orderPage", // 订单分包
+//      "name": "order",
+//      "pages": [
+//        "pagesfive/order/order" // 用户订单
+//      ]
+//    },
+//    {
+//      "root": "searchPage", // 搜索分包
+//      "name": "search",
+//      "pages": [
+//        "pagessix/searchHistory/searchHistory"
+//      ]
+//    },
+//    {
+//      "root": "reservationPage", // 线下预约分包
+//      "name": "reservation",
+//      "pages": [
+//        "pagesseven/reservation/reservation", // 预约列表
+//        "pagesseven/myReservation/myReservation", // 我的报名
+//        "pagesseven/reservationDetail/reservationDetail", // 预约详情
+//        "pagesseven/teacherDetail/teacherDetail" // 教师详情
+//      ]
+//    },
+//    {
+//      "root": "teacherPage", // 教师端
+//      "name": "teacher",
+//      "pages": [
+//        "pageseight/teacherAnswer/teacherAnswer"
+//      ]
+//    },
+//    {
+//      "root": "offlinePage", // 线下课程分包
+//      "name": "offline",
+//      "pages": [
+//        "pagesnine/courseOffline/courseOffline", // 线下课程首页
+//        "pagesnine/offlineApply/offlineApply" // 线下课程报名信息填写页面
+//      ]
+//    },
+//    {
+//      "root": "collectPage", // 收藏分包
+//      "name": "collect",
+//      "pages": [
+//        "pagesten/collect/collect" // 我的收藏&我的预约
+//      ]
+//    },
     {
       "root": "releasePage", // 收藏分包
       "name": "release",
@@ -109,29 +110,29 @@
       ]
     }
   ],
-  "preloadRule": {
-    "pages/index/index": {
-      "network": "all",
-      "packages": [
-        "answer",
-        "offline",
-        "course"
-      ]
-    },
-    "answerPage/pagesthree/answer/answer": {
-      "network": "all",
-      "packages": [
-        "release"
-      ]
-    },
-    "pages/user/user": {
-      "network": "all",
-      "packages": [
-        "order",
-        "collect"
-      ]
-    }
-  },
+//  "preloadRule": {
+//    "pages/index/index": {
+//      "network": "all",
+//      "packages": [
+//        "answer",
+//        "offline",
+//        "course"
+//      ]
+//    },
+//    "answerPage/pagesthree/answer/answer": {
+//      "network": "all",
+//      "packages": [
+//        "release"
+//      ]
+//    },
+//    "pages/user/user": {
+//      "network": "all",
+//      "packages": [
+//        "order",
+//        "collect"
+//      ]
+//    }
+//  },
   // Window configuration
   "window": {
     // 顶部导航栏

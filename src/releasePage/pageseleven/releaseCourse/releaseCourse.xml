@@ -49,7 +49,7 @@
     <view class="fw7 f34">上传课程封面</view>
     <view catchtap="upImg"
           data-type="cover"
-          class="tac br18 border-out   mt20">
+          class="tac br18 border-out i-title  mt20">
       {{ upImgArr[0].temp ? upImgArr[0].real ? '替换封面图' : '图片上传中' : '+添加封面图' }}
     </view>
     <view class="img-area mt10">
@@ -119,7 +119,7 @@
     <view class="img-area mt10">
       <view class="up-img">
         <view wx:for="{{ upImgArr4 }}" wx:key="*42" class="pr up-img-area">
-          <image catchtap="imgOperation"
+          <image catchtap="imgOperation2"
                  mode="aspectFit"
                  data-index="{{ index }}"
                  lazy-load="{{true}}"
@@ -200,7 +200,7 @@
 </view>
 
 <view class="zw mt10"></view>
-<view class="bottom-btn">
+<view catchtap="goRelease" class="bottom-btn">
   <view class="f34 cfff fw7 lh88 tac">发布</view>
 </view>
 <!--错误弹窗-->

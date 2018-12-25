@@ -5,14 +5,6 @@
            mode="aspectFill"
            src="{{ detailInfo.image }}"></image>
     <view wx:if="{{ options.type == 1 }}" catchtap="videoPlay" class="video-btn iconfont icon-bofang1 pa"></view>
-    <!--<view class="video-text pa fw7">可试看一分钟教程</view>-->
-    <!--<view class="ask-question tac bgfff br10 p20">-->
-      <!--<view class="f32 fw7">限时答题领取綉币</view>-->
-      <!--<view class="f28 a-q-bottom mian-text-color">-->
-        <!--<view catchtap="startAnswer" data-type="open">参与答题</view>-->
-        <!--<view class="cfff">继续下一集</view>-->
-      <!--</view>-->
-    <!--</view>-->
   </view>
   <video wx:else
          poster="{{ poster }}"
@@ -37,12 +29,8 @@
   </view>
 </view>
 <!--付费课程-->
-<!--<view wx:if="{{ options.type == 2 }}" class="video-buy bb {{ needSmall ? 'toBottom' : '' }}">-->
 <view wx:if="{{ options.type == 2 || options.type == 4 }}" class="video-buy bb">
-  <!--<navigator hover-class="none" url="/collagePage/pagesone/collage/collage" catchtap="buyOperation" class="f34 cfff tac fw7 video-buy-btn">拼团价: 1.8元</navigator>-->
   <view catchtap="buyOperation" class="f34 cfff tac video-buy-btn">
-    <!--<view wx:if="{{ options.type != 2 }}" class="fw7">立即购买</view>-->
-    <!--<view wx:else>-->
     <view >
       <text>报名费¥200</text>
       <text class="fw7">立即预约报名</text>
@@ -83,22 +71,6 @@
       </view>
 
       <view id="s1" class="zw20 need-check"></view>
-      <!--<view class="course-list bgfff br18">-->
-      <!--<view class="f36 fw7 p20 c3a3a3a bd1">课程目录</view>-->
-      <!--<view wx:for="123456789"-->
-      <!--data-index="{{ index }}"-->
-      <!--catchtap="chooseVideoPlay"-->
-      <!--wx:key="*10"-->
-      <!--class="f26 {{ index < (!show_more ? 3 : 9999) ? 'p20 bd1' : 'no-height' }} c-l-list {{ index == videoPlayIndex ? 'cff3b5b' : 'c666' }}">{{ index + 1 }}.圆三针手工雾眉操作要领操作圆三针手工雾眉操作要领操作圆三针手工雾眉操作要领操作 <view class="iconfont f40 {{ index == videoPlayIndex ? 'cff3b5b icon-bofang' : 'icon-bofang1'}}"></view>-->
-      <!--</view>-->
-      <!--<view catchtap="showMore"-->
-      <!--data-type="list"-->
-      <!--class="tac p20 cff3b5b fw7 f26 c-l-bottom">-->
-      <!--{{ !show_more ? '查看全部课程目录' : '收缩课程目录' }}-->
-      <!--<text class="iconfont icon-jinru fw7 f30 {{ !show_more ? '' : 'iconRotate' }}"></text>-->
-      <!--</view>-->
-      <!--</view>-->
-
       <!--地址栏-->
       <view id="check_2" class="need-check course-list bgfff br18 p30">
         <view class="f36 fw7 c444">线下教室</view>
@@ -170,14 +142,6 @@
         </view>
         <view class="video-level mt30 p30 br18"
               wx:if="{{ !starOperation }}">
-          <!--<view class="f26 cababab">课程难度</view>-->
-          <!--<view class="v-l-lev f24 c444 mt20">-->
-          <!--<view wx:for="123"-->
-          <!--wx:key="*11"-->
-          <!--catchtap="tagChoose"-->
-          <!--data-index="{{ index }}"-->
-          <!--class="v-l-l-tag {{ index == tagIndex ? 'cfff' : '' }}">见到</view>-->
-          <!--</view>-->
           <view class="f26 cababab">课程评分</view>
           <view class="v-l-star-wrap mt20">
             <view wx:for="12345"
@@ -212,15 +176,9 @@
               <view class="f26 c3a3a3a user-content p200">
                 {{ cItem.content }}
               </view>
-              <view class="user-work-img">
-                <!--&lt;!&ndash;<image lazy-load="{{true}}" wx:for='123333'&ndash;&gt;-->
-                <!--wx:key="*13"-->
-                <!--class="br10 u-w-i-img"-->
-                <!--mode="aspectFill"-->
-                <!--src="{{ poster }}"></image>-->
-              </view>
+              <!--<view class="user-work-img">-->
+              <!--</view>-->
               <view class="f20 c999 user-operation">
-                <!--<view class="iconfont icon-dianzan">66</view>-->
                 <view catchtap="replyOperation" data-name="回复楼主" data-cindex="{{ cIndex }}" class="iconfont icon-pinglun"></view>
               </view>
               <view hidden="{{ cItem.replyArr.length <= 0 ? rIndex != cIndex : false }}" class="reply pr mt20 br18 f26 c393636 p30">
@@ -386,15 +344,7 @@
             <view class="f26 c3a3a3a user-content p200">
               {{ cItem.content }}
             </view>
-            <!--<view class="user-work-img">-->
-              <!--<image lazy-load="{{true}}" wx:for='123333'-->
-                     <!--wx:key="*13"-->
-                     <!--class="br10 u-w-i-img"-->
-                     <!--mode="aspectFill"-->
-                     <!--src="{{ poster }}"></image>-->
-            <!--</view>-->
             <view class="f20 c999 user-operation">
-              <!--<view class="iconfont icon-dianzan">66</view>-->
               <view catchtap="replyOperation" data-name="回复楼主" data-cindex="{{ cIndex }}"  class="iconfont icon-pinglun"></view>
             </view>
             <view hidden="{{ cItem.replyArr.length <= 0 ? rIndex != cIndex : false }}" class="reply pr mt20 br20 f26 c393636 p30">
@@ -496,7 +446,6 @@
     </view>
   </form>
 </view>
-<!--<my-navigator-tab wx:if="{{ !needSmall }}" prop-nav="{{ tabArr2 }}"></my-navigator-tab>-->
 <!--错误弹窗-->
 <import src="/template/template"></import>
 <template wx:if="{{ toast.show }}" is="showToast" data="{{ ...toast }}"></template>
