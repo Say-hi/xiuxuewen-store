@@ -1,8 +1,11 @@
-<view class="top-info c444 tac bt1 bgfff p30">
-  <view class="fw7 mt30 f54">1200.00</view>
-  <view class="f28 mt20">我的收益</view>
+<view class="top-info ca3633e tac bt1 p30 pr">
+  <image class="incomebg pa"
+         mode="aspectFill"
+         src="https://teach-1258261086.cos.ap-guangzhou.myqcloud.com/image/admin/storeSide/income_bg.png"></image>
+  <view class="fw7 mt30 f54 ">1200.00</view>
+  <view class="f28 mt20 ">我的收益</view>
   <view class="tar">
-    <view class="get-btn f26 cff3b5b">提现</view>
+    <view class="get-btn f26 c9b735e">提现</view>
   </view>
 </view>
 
@@ -12,9 +15,9 @@
     <view class="p30 bd1"
           wx:for="1234"
           wx:key="*123">
-      <view class="f30 c393636 df fw7">
+      <view class="f30 c393636 df">
         <text>《圆三针手工雾眉》奖励</text>
-        <text>+20元</text>
+        <text class="fw7">+20元</text>
       </view>
       <view class="f28 c999 mt10">2018年12月10日 16:30</view>
     </view>

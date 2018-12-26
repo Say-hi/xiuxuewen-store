@@ -10,17 +10,17 @@ Page({
       {
         t: '发布课程',
         url: '/releasePage/pageseleven/releaseCourse/releaseCourse',
-        img: app.data.testImg
+        img: 'https://teach-1258261086.cos.ap-guangzhou.myqcloud.com/image/admin/storeSide/index_1.png'
       },
       {
         t: '我的课程',
         url: '/coursePage/pageszero/course/course',
-        img: app.data.testImg
+        img: 'https://teach-1258261086.cos.ap-guangzhou.myqcloud.com/image/admin/storeSide/index_2.png'
       },
       {
         t: '分享有奖',
         url: '/releasePage/pageseleven/releaseCourse/releaseCourse',
-        img: app.data.testImg
+        img: 'https://teach-1258261086.cos.ap-guangzhou.myqcloud.com/image/admin/storeSide/index_3.png'
       }
     ],
     testImg: app.data.testImg
